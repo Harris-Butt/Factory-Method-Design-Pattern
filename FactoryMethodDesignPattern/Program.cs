@@ -6,7 +6,20 @@ namespace FactoryMethodDesignPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CreditCard creditCard = new PlatinumFactory().CreateProduct();
+            if (creditCard != null)
+            {
+                Console.WriteLine("Card Type : " + creditCard.GetCardType());
+                Console.WriteLine("Credit Limit : " + creditCard.GetCreditCardLimit());
+                Console.WriteLine("Annual Charge :" + creditCard.GetAnnualCharge());
+            }
+            else
+            {
+                Console.Write("Invalid Card Type");
+
+
+            }
+            Console.ReadLine();
         }
     }
 }

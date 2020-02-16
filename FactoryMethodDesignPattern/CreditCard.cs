@@ -11,4 +11,5 @@ namespace FactoryMethodDesignPattern
         int GetAnnualCharge();
 
     }
+
 }
